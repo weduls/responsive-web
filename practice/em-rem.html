@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>em과 rem</title>
+</head>
+<style>
+    .outer {
+        /*
+        font-size는 기본이 상속이 된다.
+         */
+        font-size: 24px;
+    }
+    .inner {
+        /*
+        em은 부모 요소의 값을 이어감
+        부모의 요소가 24px이기에 48px로 설정됨
+         */
+        font-size: 2em;
+        /*
+        html요소를 따르기에 기본인 16px이 됨. html 루트에 폰트 값을 바꾸면 영향을 받게 됨
+         */
+        font-size: 1rem;
+        display: inline-block;
+        width:200px;
+        height: 200px;
+        background-color: aqua;
+        /*
+        !! 차이점
+        em이 padding과 margin의 형태로 사용될 때는 자신의 font-size로 사용된다.
+         */
+        padding: 1em;
+        /*
+        html root의 px이 기준 (기본값 16px)
+         */
+        margin: 1rem;
+    }
+</style>
+<body>
+    <div class="outer">
+        <div class="inner">고양이</div>
+    </div>
+</body>
+</html>

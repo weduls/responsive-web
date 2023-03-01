@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다른 상대 단위들</title>
+</head>
+<style>
+    p {
+        margin: 0;
+        /**
+        vw는 가로길의에 100분의 1을 의미 (너비에 따라 크기가 달라짐)
+         */
+        font-size: 50vw;
+        /*
+        vh는 화면 높이의 100분의 1을 의미 (높이에 따라 크기가 달라짐)
+         */
+        font-size: 50vh;
+        /*
+        vmin은 너비와 높이중 작은것에 맞추겠다
+        너비가 높이보다 작으면 너비에 맞춘다.
+         */
+        font-size: 50vmin;
+        /*
+        vmax는 너비와 높이중 큰것에 맞추겠다
+        너비가 높이보다 크면 너비에 맞춘다.
+         */
+    }
+</style>
+<body>
+    <p>왕왕</p>
+</body>
+</html>
