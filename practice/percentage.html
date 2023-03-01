@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가변 레이아웃</title>
+</head>
+<style>
+    /*
+    box-sizing
+
+    - content-box는 margin 크기, padding 크기 + 본인 div width크기
+    - border-box는 전체 div크기가 padding + margin +div width 는 해당 div의 width
+    - margin : 20, padding : 20, div : 500일 경우
+    - content-box는 양쪽 해서 20 + 20 + 500 + 20 + 20 ⇒ 580
+    - border-box는 20+20 + 420 + 20 + 20 ⇒ 500
+     */
+    * {
+        box-sizing: border-box;
+    }
+    .container {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .header {
+        width: 100%;
+        height: 100px;
+        background-color: blue;
+    }
+    .main {
+        float: left;
+        width: 67%;
+        height: 300px;
+        /*
+        부모의 너비를 기준으로 여백을 잡는다.
+         */
+        padding: 10%;
+        background-color: orange;
+    }
+    .aside {
+        float: right;
+        width: 33%;
+        height: 300px;
+        padding: 10%;
+        background-color: aqua;
+    }
+    .footer {
+        /*
+        float 좌우를 취소할 때 사용. 용도에 따라 clear: right, left로 나눠서 설정 가능
+         */
+        clear: both;
+        width: 100%;
+        height: 100px;
+        background-color: violet;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="header">HEADER</div>
+        <div class="main">MAIN</div>
+        <div class="aside">ASIDE</div>
+        <div class="footer">FOOTER</div>
+    </div>
+</body>
+</html>
