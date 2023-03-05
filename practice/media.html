@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어 쿼리</title>
+</head>
+<style>
+    img {
+        width: 200px;
+        height: 200px;
+    }
+
+    /*
+    screen이 화면(노출화면, 브라우저 화면)을 의미 - 주로 사용되고 나머지는 거의 사용되지 않음
+    print는 인쇄 결과물에 대한 결과에 대해 처리할 때
+    speech는 음성을 통해서 영상을 봐야할 때 사용
+
+    max-with(x px이하), min-width(x px보다 이상이 되었을 때 적용됨)를 가장 많이 사용한다.
+
+    만약 그냥 width로 저징하게 되면 정확히 그 px일때만 바뀌기 때문에 사용하지 않음
+     */
+    @media screen and (min-width: 800px) {
+        img {
+            width: 400px;
+            height: 400px;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        img {
+            width: 800px;
+            height: 800px;
+        }
+    }
+</style>
+<body>
+    <img src="https://s.pstatic.net/static/www/img/uit/sp_main_947f65.png">
+</body>
+</html>

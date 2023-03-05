@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가변 이미지</title>
+</head>
+<style>
+    div {
+        width: 30%;
+    }
+
+    img {
+        /*
+        %로만 지정하였을때는 브라우저가 커지면 이미지가 깨질 수 있음
+         */
+        width: 100%;
+        /*
+        최대 확대 이미지를 제한할 수 있다.
+         */
+        max-width: 640px;
+    }
+
+</style>
+<body>
+<div>
+    <img src="https://s.pstatic.net/static/www/img/uit/sp_main_947f65.png">
+</div>
+</body>
+</html>

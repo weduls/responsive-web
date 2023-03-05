@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가변 이미지</title>
+</head>
+<style>
+</style>
+<body>
+<picture>
+    /** 800px까지만 source이미지 그 이하는 아래 이미지를 보여줄때 사용 - 해상도마다 비율이 큰 이미지로 교체하고 싶을 때 사용 **/
+    <source srcset="https://s.pstatic.net/static/www/img/uit/sp_main_947f65.png" media="(min-width: 800px)">
+    <img src="https://t1.daumcdn.net/cfile/tistory/996C84445B4969A22B">
+</picture>
+</body>
+</html>
